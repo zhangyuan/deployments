@@ -11,3 +11,9 @@ helm install airflow ./ -n airflow --create-namespace
 ```
 helm upgrade airflow ./ -n airflow 
 ```
+
+## Uninstall
+
+```
+helm uninstall airflow -n airflow 
+```
