@@ -1,0 +1,10 @@
+airflow:
+  persistence:
+    size: 2Gi
+  workers:
+    persistence:
+      size: 5Gi
+  log:
+    persistence:
+      enabled: true
+      size: 2Gi

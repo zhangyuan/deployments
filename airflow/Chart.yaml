@@ -1,0 +1,9 @@
+apiVersion: v2
+name: airflow
+description: airflow
+type: application
+version: 0.1.0
+dependencies:
+  - name: airflow
+    repository: https://airflow.apache.org
+    version: 1.6.0

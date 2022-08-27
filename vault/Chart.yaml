@@ -3,7 +3,7 @@ name: vault
 description: vault
 type: application
 version: 0.1.0
-appVersion: "1.16.0"
+appVersion: "0.21.0"
 dependencies:
   - name: vault
     repository: https://helm.releases.hashicorp.com
