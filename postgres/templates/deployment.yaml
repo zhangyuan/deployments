@@ -28,6 +28,16 @@ spec:
         - name: data-storage
           persistentVolumeClaim:
             claimName: postgres-data-pvc
+      initContainers:
+        - name: init-config
+          image: busybox:1.28
+          command:
+            - sh
+            - -c
+            - echo "host all all all md5" > /var/lib/postgresql/data/pg_hba.conf
+          volumeMounts:
+            - mountPath: "/var/lib/postgresql/data"
+              name: data-storage
       containers:
         - name: {{ .Chart.Name }}
           securityContext:
